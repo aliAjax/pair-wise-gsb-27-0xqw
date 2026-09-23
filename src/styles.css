@@ -109,8 +109,9 @@ h1 {
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) 1fr;
+  grid-template-columns: minmax(360px, 470px) 1fr;
   gap: 18px;
+  align-items: start;
 }
 
 .panel, .list-panel {
@@ -243,6 +244,263 @@ textarea {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #176b87, #64b6ac);
+}
+
+/* ---------- 搬迁报价台 ---------- */
+.endpoint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border: 1px dashed #cfd8e5;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfe;
+}
+
+.endpoint .full {
+  grid-column: 1 / -1;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.hint {
+  display: block;
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #8492a8;
+}
+
+.hint.ok {
+  color: #14724f;
+}
+
+/* 实时试算面板 */
+.preview {
+  margin: 16px 0;
+  border: 1px solid #d9e6ee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview h3 {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #eef5fb;
+  color: #176b87;
+}
+
+.preview-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-top: 1px solid #e7edf4;
+}
+
+.preview-line strong {
+  display: block;
+  font-size: 14px;
+}
+
+.basis {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: #8492a8;
+}
+
+.preview-line em {
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+em.zero, .zero {
+  color: #a3afc2;
+  font-weight: 500 !important;
+}
+
+.preview-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid #d9e6ee;
+  background: #f3f8fc;
+  font-size: 16px;
+}
+
+.preview-total strong {
+  color: #176b87;
+  font-size: 22px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button.ghost {
+  background: transparent;
+  color: #5b667a;
+  border: 1px solid #cfd8e5;
+}
+
+.form-warn {
+  margin: 0 0 10px;
+  color: #b05a2c;
+  font-size: 13px;
+}
+
+/* 记录卡片 */
+.record.confirmed {
+  border-color: #cfe3d8;
+  background: #fafdfb;
+}
+
+.record.editing {
+  outline: 2px solid #176b87;
+  outline-offset: 1px;
+}
+
+.route {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5b667a;
+}
+
+.meta {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #8492a8;
+}
+
+.chip {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #5b667a;
+  font-size: 11px;
+}
+
+.chip.latest {
+  background: #e8f4ef;
+  color: #14724f;
+}
+
+.chip.legacy {
+  background: #fbf0e2;
+  color: #9a6017;
+}
+
+.status.confirmed {
+  background: #e8f4ef;
+  color: #14724f;
+}
+
+.status.pending {
+  background: #fdf3e0;
+  color: #9a6017;
+}
+
+.record-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f3f8fc;
+  border-radius: 8px;
+}
+
+.record-summary span {
+  color: #5b667a;
+  font-size: 13px;
+}
+
+.record-summary strong {
+  font-size: 20px;
+  color: #176b87;
+}
+
+.record-summary strong.frozen {
+  color: #14724f;
+}
+
+.link {
+  margin-left: auto;
+  padding: 4px 8px;
+  background: transparent;
+  color: #176b87;
+  font-size: 13px;
+}
+
+.breakdown {
+  margin: 10px 0;
+  border: 1px solid #e7edf4;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: #fff;
+}
+
+.breakdown-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eef2f7;
+  font-size: 14px;
+}
+
+.breakdown-line:last-of-type {
+  border-bottom: 0;
+}
+
+.breakdown-line small {
+  display: block;
+  margin-top: 2px;
+  color: #8492a8;
+  font-size: 12px;
+}
+
+.breakdown-line em {
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 4px;
+  color: #445069;
+}
+
+.breakdown-total strong {
+  color: #14724f;
+  font-size: 18px;
+}
+
+.freeze-note {
+  margin: 6px 0 8px;
+  font-size: 12px;
+  color: #14724f;
+}
+
+.pending-note {
+  margin: 8px 0 2px;
+  font-size: 12px;
+  color: #9a6017;
 }
 
 .empty {
